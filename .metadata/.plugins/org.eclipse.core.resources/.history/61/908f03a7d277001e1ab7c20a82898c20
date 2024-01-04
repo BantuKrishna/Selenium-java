@@ -1,0 +1,35 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.CalendarPage;
+
+public class calendar_testcases extends BaseClass {
+	
+	@Test
+	public void CalendarPageTC_01() throws Exception {
+		CalendarPage Cp= new CalendarPage(driver);
+		Thread.sleep(3000);
+		Cp.cal.click();
+		Thread.sleep(3000);
+		Cp.next.click();
+		Thread.sleep(3000);
+		Cp.room.click();
+		Thread.sleep(3000);
+		Cp.filter.click();
+		Thread.sleep(3000);
+		Cp.app.click();
+		Thread.sleep(3000);
+		Cp.mname.sendKeys("Developers Project Meeting");
+		Thread.sleep(3000);
+		Cp.mdesc.sendKeys("Developers Project Meeting1");
+		Thread.sleep(3000);
+		Cp.date.click();
+		Thread.sleep(3000);
+		Cp.date1.click();
+		Thread.sleep(3000);
+		Cp.time.click();
+		Thread.sleep(3000);
+	}
+
+}

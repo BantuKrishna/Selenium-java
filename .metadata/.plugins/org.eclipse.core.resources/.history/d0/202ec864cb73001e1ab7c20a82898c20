@@ -1,0 +1,27 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.EditMeetingPage;
+
+public class edit_testcases extends BaseClass {
+	
+@Test
+	
+	public void EditMeetingPageTC_01() throws Exception {
+	
+	EditMeetingPage Mp=new EditMeetingPage (driver);
+	Thread.sleep(3000);
+	Mp.Meet.click();
+	Thread.sleep(3000);
+	Mp.Edit.click();
+	Thread.sleep(3000);
+	Mp.Title.sendKeys("and Dev Team");
+	Thread.sleep(3000);
+	
+	
+	
+	
+
+}
+}

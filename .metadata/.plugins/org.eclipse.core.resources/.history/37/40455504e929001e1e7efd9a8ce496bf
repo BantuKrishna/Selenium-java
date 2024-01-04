@@ -1,0 +1,13 @@
+feature :Testing All Test cases Using Cucumber Framewrok
+
+
+
+
+
+
+@Test
+Given Inclinic Url Enter
+Then Click on Login Page
+Then Enter Valid <Username> and <Password>
+And Click on login button
+Then Verify the Login Page Dashboard

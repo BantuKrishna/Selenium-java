@@ -1,0 +1,78 @@
+package testCases;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.reactivex.rxjava3.functions.Action;
+import pageObjects.SettingsPage;
+
+public class settings_testcases extends BaseClass {
+@Test(priority=0)
+	
+	public void SettingsPageTC_01() throws Exception {
+		SettingsPage Sp= new SettingsPage (driver);
+		Thread.sleep(3000);
+		Sp.set.click();
+		Thread.sleep(3000);
+		Sp.edi.click();
+		Thread.sleep(3000);
+		Actions action = new Actions(driver);
+		action.doubleClick(Sp.name).perform();
+		Thread.sleep(1000);
+		Sp.cancel.click();
+		Thread.sleep(3000);
+	
+		}
+	
+	@Test(priority=0)
+	
+	public void SettingsPageTC_02() throws Exception {
+		SettingsPage Sp= new SettingsPage (driver);
+		Thread.sleep(3000);
+		Sp.set.click();
+		Thread.sleep(3000);
+		Sp.edi.click();
+		Thread.sleep(3000);
+		Actions action = new Actions(driver);
+		action.doubleClick(Sp.name).perform();
+		Thread.sleep(1000);
+		Robot robot = new Robot();   
+		robot.keyPress(KeyEvent.VK_BACK_SPACE);
+		robot.keyRelease(KeyEvent.VK_BACK_SPACE);
+		Thread.sleep(3000);
+		Sp.save.click();
+		Thread.sleep(3000);
+//		WebElement text = Sp.toast;
+//	String Actual_Text = text.getText();
+//	Assert.assertEquals(Actual_Text, "Your name updated successfully");
+	    
+	Thread.sleep(3000);
+		
+	}
+	
+	@Test(priority=1)
+	public void SettingsPageTC_03() throws Exception {
+		SettingsPage Sp= new SettingsPage (driver);
+		Thread.sleep(3000);
+		Sp.set.click();
+		Thread.sleep(3000);
+		Sp.edi.click();
+		Thread.sleep(3000);
+		Actions action = new Actions(driver);
+		action.doubleClick(Sp.name).perform();
+		Thread.sleep(1000);
+		Sp.name.sendKeys(" Prasad");
+		Thread.sleep(1000);
+		Sp.save.click();
+		Thread.sleep(1000);
+		
+	}
+	
+	
+
+}

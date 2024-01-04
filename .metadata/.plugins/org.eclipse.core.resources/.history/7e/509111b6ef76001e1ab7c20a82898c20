@@ -1,0 +1,28 @@
+package testCases;
+
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+import io.reactivex.rxjava3.functions.Action;
+import pageObjects.SettingsPage;
+
+public class settings_testcases extends BaseClass {
+	
+	@Test
+	
+	public void SettingsPageTC_01() throws Exception {
+		SettingsPage Sp= new SettingsPage (driver);
+		Thread.sleep(3000);
+		Sp.set.click();
+		Thread.sleep(3000);
+		Sp.edi.click();
+		Thread.sleep(3000);
+		Actions action = new Actions(driver);
+		action.doubleClick(Sp.name).perform();
+	    
+		//Sp.name.sendKeys(");
+		
+	}
+	
+
+}

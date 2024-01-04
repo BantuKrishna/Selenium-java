@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="InmvcProject" tests="1" started="1" failures="0" errors="2" ignored="0">
+  <testsuite name="Step_Definitions.TestRunner" time="0.114">
+    <testsuite name="Verifying people module wit all possible scenarios" time="0.114">
+      <testcase name="Verifying people page UI Elements" classname="Verifying people module wit all possible scenarios" time="0.114">
+        <error>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\peoplelink\eclipse-workspace\InmvcProject\src\test\resources\drivers\chromedriver.exe&#13;
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:590)&#13;
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)&#13;
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)&#13;
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)&#13;
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)&#13;
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)&#13;
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)&#13;
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)&#13;
+	at Step_Definitions.schedularsetps.openApp(schedularsetps.java:32)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null&#13;
+	at Step_Definitions.schedularsetps.closeApp(schedularsetps.java:58)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

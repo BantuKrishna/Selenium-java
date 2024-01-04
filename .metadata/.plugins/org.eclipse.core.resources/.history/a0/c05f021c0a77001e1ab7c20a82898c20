@@ -1,0 +1,23 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.ProfilePage;
+
+public class profile_testcases extends BaseClass {
+	@Test
+	public void ProfilePageTC_01() throws Exception {
+		
+		
+		
+		ProfilePage Pp= new ProfilePage (driver);
+		Pp.set.click();
+		Thread.sleep(3000);
+		Pp.img.click();
+		Thread.sleep(3000);
+		Pp.pro.click();
+		Pp.pro.sendKeys("C:\\Users\\peoplelink\\Pictures\\Screenshots\\Screenshot (60).png");
+		Thread.sleep(3000);
+	}
+
+}

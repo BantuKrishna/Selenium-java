@@ -1,0 +1,19 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.ProfilePage;
+
+public class profile_testcases extends BaseClass {
+	@Test
+	public void ProfilePageTC_01() {
+		
+		
+		
+		ProfilePage Pp= new ProfilePage (driver);
+		Pp.set.click();
+		Pp.pro.click();
+		Pp.img.click();
+	}
+
+}

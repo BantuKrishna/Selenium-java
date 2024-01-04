@@ -1,0 +1,15 @@
+package testCases;
+
+import pageObjects.ProfilePage;
+
+public class profile_testcases extends BaseClass {
+	
+	public void ProfilePageTC_01() {
+		
+		ProfilePage Pp= new ProfilePage (driver);
+		Pp.set.click();
+		Pp.pro.click();
+		Pp.img.click();
+	}
+
+}

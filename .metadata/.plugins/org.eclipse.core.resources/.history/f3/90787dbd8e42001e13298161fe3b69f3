@@ -1,0 +1,31 @@
+package selenium.assignments;
+
+
+	
+	public class AmazonHomePageVerification {
+	    public static void main(String[] args) {
+	        // Set the system property to use FirefoxDriver
+	        System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
+	        
+	        // Initialize the WebDriver
+	        WebDriver driver = new FirefoxDriver();
+	        
+	        // Navigate to the Amazon homepage
+	        driver.get("https://www.amazon.com");
+	        
+	        // Capture the title of the page
+	        String pageTitle = driver.getTitle();
+	        
+	        // Perform assertion to validate the title
+	        if (pageTitle.contains("Amazon")) {
+	            System.out.println("Amazon homepage verified!");
+	        } else {
+	            System.out.println("Verification failed!");
+	        }
+	        
+	        // Close the browser
+	        driver.quit();
+	    }
+	}
+
+}

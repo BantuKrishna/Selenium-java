@@ -1,0 +1,21 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class EditMeetingPage extends BasePage {
+	
+	public EditMeetingPage(WebDriver driver) {
+		super(driver); 
+	}
+		@FindBy(xpath="//span[text()='Testing Team Meeting']")
+		public WebElement Meet;
+	
+	    @FindBy(xpath="/html/body/div[2]/div[3]/div/div/div[3]/button[2]")
+	    public WebElement Edit;
+	    
+	    @FindBy(xpath="//*[@id=\":rf:\"]")
+	    public WebElement Title;
+
+}

@@ -1,0 +1,74 @@
+package testCases;
+
+import java.util.ArrayList;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import pageObjects.SignupPage;
+
+public class signup_testcases extends BaseClass  {
+	
+	@Test
+	public void signuppage() throws Exception
+	{
+		SignupPage sp=new SignupPage(driver);
+		sp.clicksignup();
+		Thread.sleep(3000);
+		
+		sp.companysignup();
+		
+		Thread.sleep(3000);
+		
+		sp.companyname("Krishna");
+		Thread.sleep(3000);
+		sp.search("software");
+		Thread.sleep(3000);
+		sp.indus();
+		Thread.sleep(3000);
+		sp.contactname("Krishna");
+		Thread.sleep(3000);
+		sp.email("zos@yopmail.com");
+		Thread.sleep(3000);
+		sp.countryDD.click();
+		Thread.sleep(3000);
+		sp.India.click();
+		Thread.sleep(3000);
+		
+		sp.stateDD.click();
+		Thread.sleep(3000);
+		sp.Telangana.click();
+		Thread.sleep(3000);
+		sp.cityDD.click();
+		Thread.sleep(3000);
+		sp.Hyderabad.click();
+		Thread.sleep(3000);
+		sp.phno("9705981776");
+		Thread.sleep(3000);
+		sp.pass("inLynk@123");
+		Thread.sleep(3000);
+		sp.eye.click();
+		Thread.sleep(3000);
+		sp.confirm("inLynk@123");
+		Thread.sleep(3000);
+		sp.eyes.click();
+		Thread.sleep(3000);
+		sp.chbox.click();
+		Thread.sleep(3000);
+		sp.signupnow.click();
+		Thread.sleep(3000);
+		
+//		WebElement text = driver.findElement(By.xpath("//div[text()='An account with the given email already exists.']"));
+//		String Actual_Text = text.getText();
+//		Assert.assertEquals(Actual_Text, "An account with the given email already exists.");
+//		Thread.sleep(3000);
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		driver.get("https://yopmail.com/en/wm");
+	}
+}
+

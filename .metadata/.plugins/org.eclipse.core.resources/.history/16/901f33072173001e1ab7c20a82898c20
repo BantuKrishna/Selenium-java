@@ -1,0 +1,21 @@
+package testCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import pageObjects.HomePage;
+
+public class home_testcases extends login_testcases {
+	
+	public void HomepageTC1() throws Exception {
+	
+		
+	HomePage hp =new HomePage (driver);	
+	WebElement text = hp.No;
+	String Actual_Text = text.getText();
+	Assert.assertEquals(Actual_Text, "No meetings…");
+	Thread.sleep(3000);
+
+}
+}

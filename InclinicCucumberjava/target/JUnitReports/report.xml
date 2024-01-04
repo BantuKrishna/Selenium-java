@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.155" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Testing All Test cases Using Cucumber Framewrok" name="Verify the Login page - Example #1.1" time="0.033">
+<failure/>
+<system-out><![CDATA[
+Given Inclinic Url Enter....................................................undefined
+Then Click on Login Page....................................................skipped
+Then Enter Valid <Username> and Homeo@123...................................skipped
+And Click on login button...................................................skipped
+Then Verify the Login Page Dashboard........................................skipped
+]]></system-out>
+</testcase>
+</testsuite>

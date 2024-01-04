@@ -1,0 +1,63 @@
+package InclinicStepDefiniations_File;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import genericLib.PropertyFile;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
+public class TestStpes_Inclinic {
+	
+	WebDriver driver=null;
+	PropertyFile p=new PropertyFile();
+ 
+	@Before(order=0)
+	public void openApp() throws IOException  {
+
+		System.out.println(" I am inside brower setup");
+		String projectPath = System.getProperty("user.dir");
+		System.out.println("Project path is: "+projectPath);
+
+		System.setProperty("webdriver.chrome.driver",
+				projectPath+"/src/test/resources/drivers/chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		driver = new ChromeDriver(options);
+
+		//		WebDriverManager.operadriver().setup();	
+		//		driver=new OperaDriver();
+
+		//	WebDriverManager.firefoxdriver().setup();		
+		//	driver=new FirefoxDriver();
+
+		//	WebDriverManager.edgedriver().setup();	
+		//	driver=new EdgeDriver();
+
+		driver.manage().window().maximize();
+		driver.get(p.getPropertyFiledata("url"));
+		//		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
+		//		driver.findElement(By.xpath("//button[@type='button']")).click();
+
+
+	}
+	@After(order=0)
+	public void closeApp() {
+		System.out.println(" I am Closing the browser");
+		driver.close();
+		driver.quit();
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,16 @@
+package InclinicStepDefiniations_File;
+
+public class TestRunner {
+	
+	@RunWith(Cucumber.class)
+	@CucumberOptions(features="src/test/resources/anand_features",glue={"StepDefination_inlink"},
+	monochrome = true,
+	plugin={"pretty","junit:target/JUnitReports/report.xml",
+	"html:target/HtmlReports/report.html",
+	"json:target/JsonReports/report.json"},
+	tags="@SmokeTest11"		
+
+
+			)
+
+}

@@ -1,0 +1,44 @@
+package testCases;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import pageObjects.EditMeetingPage;
+
+public class edit_testcases extends BaseClass {
+	
+@Test
+	
+	public void EditMeetingPageTC_01() throws Exception {
+	
+	EditMeetingPage Mp=new EditMeetingPage (driver);
+	Thread.sleep(5000);
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//	WebElement element=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[2]/div[3]/div/div/div[1]/div/div[2]"));
+//	JavascriptExecutor js=  (JavascriptExecutor)driver;
+//	js.executeScript("arguments[0].scrollIntoView();", element);
+//	WebElement Meet1 = wait.until(ExpectedConditions.elementToBeClickable(Mp.Meet));
+//	Meet1.click();
+	
+			
+//	Mp.Meet.click();
+//	Thread.sleep(3000);
+//	Mp.Edit.click();
+//	Thread.sleep(3000);
+//	Mp.Meet.clear();
+//	Thread.sleep(3000);
+//	Mp.Meet.sendKeys("Developer Meeting");
+//	Thread.sleep(3000);
+//	
+	
+	Mp.Book.click();
+	Thread.sleep(3000);
+
+}
+}

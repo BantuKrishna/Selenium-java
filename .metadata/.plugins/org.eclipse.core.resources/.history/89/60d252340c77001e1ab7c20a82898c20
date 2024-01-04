@@ -1,0 +1,37 @@
+package testCases;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.testng.annotations.Test;
+
+import pageObjects.ProfilePage;
+
+public class profile_testcases extends BaseClass {
+	@Test
+	public void ProfilePageTC_01() throws Exception {
+		
+		
+		
+		ProfilePage Pp= new ProfilePage (driver);
+		Pp.set.click();
+		Thread.sleep(3000);
+		Pp.img.click();
+		Thread.sleep(3000);
+		Pp.pro.click();
+		Robot robot = new Robot();
+
+        // Provide the file path (modify this as needed)
+        String filePath = "C:/Users/peoplelink/Downloads/peoplelink2.jfif";
+
+        // Type the file path using keyboard input (Ctrl+V for paste)
+        for (char c : filePath.toCharArray()) {
+            robot.keyPress(KeyEvent.VK_META);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_META);
+            robot.keyRelease(KeyEvent.VK_V);
+		
+		Thread.sleep(3000);
+	}
+
+}

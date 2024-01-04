@@ -1,0 +1,33 @@
+package testCases;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.testng.annotations.Test;
+
+import pageObjects.ProfilePage;
+
+public class profile_testcases extends BaseClass {
+	@Test
+	public void ProfilePageTC_01() throws Exception {
+		
+		
+		
+		ProfilePage Pp= new ProfilePage (driver);
+		Pp.set.click();
+		Thread.sleep(3000);
+		Pp.img.click();
+		Thread.sleep(3000);
+		Pp.pro.click();
+		
+		String filePath = "C:/Users/peoplelink/Downloads/peoplelink2.jfif";
+        Pp.pro.sendKeys(filePath);
+		
+
+     
+		
+		Thread.sleep(3000);
+	}
+
+}
+

@@ -1,0 +1,21 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.CalendarPage;
+
+public class calendar_testcases extends BaseClass {
+	
+	@Test
+	public void CalendarPageTC_01() throws Exception {
+		CalendarPage Cp= new CalendarPage(driver);
+		Thread.sleep(3000);
+		Cp.cal.click();
+		Thread.sleep(3000);
+		Cp.next.click();
+		Thread.sleep(3000);
+		Cp.time.click();
+		Thread.sleep(3000);
+	}
+
+}

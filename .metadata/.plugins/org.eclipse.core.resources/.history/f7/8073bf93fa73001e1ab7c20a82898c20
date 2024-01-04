@@ -1,0 +1,138 @@
+package testCases;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import pageObjects.EditMeetingPage;
+
+public class edit_testcases extends BaseClass {
+//
+//	@Test(priority=0)
+//
+//	public void EditMeetingPageTC_01() throws Exception {
+//
+//		EditMeetingPage Mp=new EditMeetingPage (driver);
+//		Thread.sleep(5000);
+//		//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		//	WebElement element=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[2]/div[3]/div/div/div[1]/div/div[2]"));
+//		//	JavascriptExecutor js=  (JavascriptExecutor)driver;
+//		//	js.executeScript("arguments[0].scrollIntoView();", element);
+//		//	WebElement Meet1 = wait.until(ExpectedConditions.elementToBeClickable(Mp.Meet));
+//		//	Meet1.click();
+//
+//
+//		Mp.Meet.click();
+//		Thread.sleep(3000);
+//		Mp.Edit.click();
+//		Thread.sleep(3000);
+//		Mp.Title.click();
+//		Thread.sleep(1000);
+//		Robot robot = new Robot();   
+//		robot.keyPress(KeyEvent.VK_CONTROL);
+//		robot.keyPress(KeyEvent.VK_A);
+//		robot.keyRelease(KeyEvent.VK_CONTROL);
+//		robot.keyRelease(KeyEvent.VK_A);
+//
+//		//	Mp.Title.clear();
+//		Thread.sleep(3000);
+//		Mp.Title.sendKeys("Developers Meeting");
+//		Thread.sleep(3000);
+//		Mp.update.click();
+//		Thread.sleep(3000);
+//		Mp.up.click();
+//		Thread.sleep(3000);
+//
+//	}
+//	@Test(priority=1)
+//
+//	public void EditMeetingPageTC_01() throws Exception {
+//
+//		EditMeetingPage Mp=new EditMeetingPage (driver);
+//
+//		Thread.sleep(3000);
+//		Mp.Meet.click();
+//		Thread.sleep(3000);
+//		Mp.Edit.click();
+//		Thread.sleep(3000);
+//		Mp.Desc.click();
+//		Robot robot = new Robot();
+//		robot.keyPress(KeyEvent.VK_CONTROL);
+//		robot.keyPress(KeyEvent.VK_A);
+//		robot.keyRelease(KeyEvent.VK_CONTROL);
+//		robot.keyRelease(KeyEvent.VK_A);
+//		Mp.Desc.sendKeys("Developers Meeting1");
+//		Thread.sleep(3000);
+//		Mp.update.click();
+//		Thread.sleep(3000);
+//		Mp.up.click();
+//		Thread.sleep(3000);
+//	}
+	
+	@Test(priority=2)
+	public void EditMeetingPageTC_03() throws Exception {
+
+		EditMeetingPage Mp=new EditMeetingPage (driver);
+
+		Thread.sleep(3000);
+		Mp.Meet.click();
+		Thread.sleep(3000);
+		Mp.Edit.click();
+		Thread.sleep(3000);
+		Mp.Title.click();
+		Thread.sleep(1000);
+		Robot robot = new Robot();   
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_A);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_A);
+
+		//	Mp.Title.clear();
+		Thread.sleep(3000);
+		Mp.Title.sendKeys("Developers Meeting");
+		Mp.Desc.click();
+		Robot robot1 = new Robot();
+		robot1.keyPress(KeyEvent.VK_CONTROL);
+		robot1.keyPress(KeyEvent.VK_A);
+		robot1.keyRelease(KeyEvent.VK_CONTROL);
+		robot1.keyRelease(KeyEvent.VK_A);
+		Mp.Desc.sendKeys("Developers Meeting1");
+		Thread.sleep(3000);
+		Mp.Add.click();
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		WebElement Add  = wait.until(ExpectedConditions.elementToBeClickable(Mp.Add));
+		Thread.sleep(6000);
+		Mp.Add.sendKeys("badhrinath@instavc.com");
+		Robot robot11 = new Robot();
+		robot11.keyPress(KeyEvent.VK_ENTER);
+		robot11.keyRelease(KeyEvent.VK_ENTER);
+		
+		
+		Thread.sleep(3000);
+		Mp.update.click();
+		Thread.sleep(3000);
+		Mp.up.click();
+		Thread.sleep(3000);
+		
+		
+	}
+		
+	
+	
+		
+
+
+
+
+
+
+
+	}

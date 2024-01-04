@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * @author peoplelink
+ *
+ */
+module SeleniumAssignments {
+	requires org.seleniumhq.selenium.grid;
+}

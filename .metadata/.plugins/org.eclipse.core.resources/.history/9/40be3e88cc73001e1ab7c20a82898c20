@@ -1,0 +1,35 @@
+package testCases;
+
+import java.time.Duration;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import pageObjects.EditMeetingPage;
+
+public class edit_testcases extends BaseClass {
+	
+@Test
+	
+	public void EditMeetingPageTC_01() throws Exception {
+	
+	EditMeetingPage Mp=new EditMeetingPage (driver);
+	Thread.sleep(3000);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	JavascriptExecutor js=  (JavascriptExecutor)driver;
+	js.executeScript("arguments[0].scrollIntoView;", Mp.Meet);
+			
+	Mp.Meet.click();
+	Thread.sleep(3000);
+	Mp.Edit.click();
+	Thread.sleep(3000);
+	Mp.Title.sendKeys("and Dev Team");
+	Thread.sleep(3000);
+	
+	
+	
+	
+
+}
+}

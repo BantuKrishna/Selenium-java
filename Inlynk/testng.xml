@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="InlynkSuite">
+  <test thread-count="5" name="InlynkTest">
+    <classes>
+     <class name="testCases.signup_testcases"/>
+      <class name="testCases.login_testcases"/>
+      <class name="testCases.BaseClass"/>
+    </classes>
+  </test> <!-- InlynkTest -->
+</suite> <!-- InlynkSuite -->

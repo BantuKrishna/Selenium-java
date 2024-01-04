@@ -1,0 +1,17 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.LoginPage;
+
+public class login_testcases extends BaseClass {
+	
+@Test
+	
+	public void loginpage() throws Exception {
+	
+		LoginPage lp=new LoginPage(driver);
+		lp.email("apurup@instavc.com");
+		lp.pass("Apurup@12345");
+
+}

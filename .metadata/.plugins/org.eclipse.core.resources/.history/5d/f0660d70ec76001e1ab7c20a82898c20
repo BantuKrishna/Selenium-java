@@ -1,0 +1,18 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.SettingsPage;
+
+public class settings_testcases extends BaseClass {
+	
+	@Test
+	
+	public void SettingsPageTC_01() throws Exception {
+		SettingsPage Sp= new SettingsPage (driver);
+		Thread.sleep(3000);
+		Sp.set.click();
+	}
+	
+
+}

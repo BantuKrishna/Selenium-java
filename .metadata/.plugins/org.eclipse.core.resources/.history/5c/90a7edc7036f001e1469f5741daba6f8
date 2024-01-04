@@ -1,0 +1,54 @@
+package Step_Definitions;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import genericLib.PropertyFile;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class schedularsetps {
+
+	 WebDriver driver=null;
+	PropertyFile p=new PropertyFile();
+	
+	
+	@Given("user is in Login Page")
+	public void user_is_in_login_page() {
+		System.out.println("ABC");
+	  
+	}
+
+//	@When("user enter sukumar@yopmail.com and Inlink@{int}")
+//	public void user_enter_sukumar_yopmail_com_and_inlink(Integer int1) {
+//	   
+//	}
+//
+//	@When("click on Login button")
+//	public void click_on_login_button() {
+//	   
+//	}
+//
+//	@Then("user is navigated to dashboard page")
+//	public void user_is_navigated_to_dashboard_page() {
+//	   
+//	}
+//
+//	@Then("user click on people module")
+//	public void user_click_on_people_module() {
+//	   
+//	}
+//
+//	@Then("user is in people page")
+//	public void user_is_in_people_page() {
+//	   
+//	}
+
+}

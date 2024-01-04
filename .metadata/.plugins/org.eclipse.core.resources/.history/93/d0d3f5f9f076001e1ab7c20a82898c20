@@ -1,0 +1,26 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class SettingsPage extends BasePage {
+	
+	public SettingsPage (WebDriver driver) {
+		super(driver);
+	}
+	
+	
+     @FindBy(xpath="//span[text()='Settings']")
+     public WebElement set;
+     
+     @FindBy(xpath="//div[@class='baseBlockCntnr']//div[1]//div[1]//div[2]//div[2]//div[1]//span[2]//*[name()='svg']")
+     public WebElement edi;
+     
+     @FindBy(id="standard-adornment-password")
+    public WebElement name;
+     
+     
+}
+
+	
